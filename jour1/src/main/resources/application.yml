@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: prod
+
+---
+
+# Ce document sera actif par défaut, définissant le profil "dev"
+spring:
+  config:
+    activate:
+      on-profile: dev
+greeting:
+  message: "Hello World from Dev"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+greeting:
+  message: "Hello World from Prod"
