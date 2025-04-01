@@ -22,3 +22,32 @@ Pour lancez le projet sur VScode allez ouvrez le terminal et deplacez vous dans 
 
 - job06 :
     Lors de l'exécution de l'application en mode développement, DevTools surveille les modifications sur le classpath et redémarre automatiquement l'application. On peux ainsi modifier notre code (par exemple, changer le message dans HelloController ou dans application.yml) et observer que le changement est pris en compte sans redémarrage manuel complet de l'application.
+
+## Reponse Question Jour 2 :
+
+- job01 :
+    Le modèle MVC structure une application web en séparant clairement les responsabilités :
+    - Modèle (Model) : Gère les données et la logique métier.
+    - Vue (View) : S'occupe de l'affichage et de l'interface utilisateur.
+    - Contrôleur (Controller) : Interprète les requêtes de l'utilisateur, interagit avec le modèle et choisit la vue à afficher.
+
+    Cette séparation facilite la maintenance, le développement et les tests en rendant le code plus modulaire et réutilisable.
+
+- job02 :
+    Thymeleaf est un moteur de templates qui permet d'intégrer des expressions et des fragments de logique directement dans des fichiers HTML tout en restant valide en tant que HTML. Les differences principales sont le Dynamisme intégré ( Thymeleaf permet d'insérer des données dynamiques via des attributsdirectement dans le code HTML, sans nécessiter de transformation externe ) , Edition simplifiée ( Les templates Thymeleaf sont des fichiers HTML valides, ce qui facilite le prototypage et la modification avec des outils graphiques ).
+
+- job03 :
+    Dans Spring, on peux transmettre des données d'un contrôleur à une vue en utilisant le modèle. Par exemple, on peux ajouter des attributs au modèle via l'interface Model.
+
+- job04 :
+    Spring facilite la gestion des formulaires en fournissant :
+    - Data Binding Automatique : Les données du formulaire sont automatiquement liées à un objet Java (par exemple, via l'annotation @ModelAttribute).
+    - Validation Intégrée : Avec l’annotation @Valid (ou @Validated) et une implementation de Bean Validation (ex : Hibernate Validator), Spring permet de valider les entrées du formulaire et d’afficher dynamiquement des messages d’erreur via BindingResult.
+    - Gestion des Erreurs : En combinant BindingResult et des utilitaires Thymeleaf (comme th:errors), il est simple d’afficher les messages d’erreur directement dans la vue.
+    Configuration Simplifiée : Spring MVC centralise la configuration des formulaires et fournit des convertisseurs pour manipuler les données envoyées par le formulaire.
+
+- job05 :
+    Spring intègre la validation des données du formulaire en s'appuyant sur l'API Bean Validation (comme Hibernate Validator). Voici comment cela fonctionne :
+    -Annotations sur le bean : on ajoute des annotations de validation (comme @NotBlank, @Size, @Min, etc.) sur les attributs de votre bean.
+    -@Valid et BindingResult dans le contrôleur : Dans la méthode du contrôleur qui reçoit le formulaire, on utilise l'annotation @Valid sur l'objet, accompagnée d'un objet BindingResult afin de capturer d'éventuelles erreurs.
+    - Affichage des erreurs dans la vue : Avec Thymeleaf, on peux utiliser l'attribut th:errors pour afficher les messages d'erreur associés à chaque champ :
