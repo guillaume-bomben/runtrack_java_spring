@@ -81,3 +81,20 @@ Pour lancez le projet sur VScode allez ouvrez le terminal et deplacez vous dans 
 
 - job06 :
     Si l'entité à sauvegarder n'a pas d'identifiant (ou si l'id est null), elle sera considérée comme nouvelle et sera insérée dans la base de données. En revanche, si l'objet possède un identifiant existant, la méthode save procède à une fusion (merge) de l'entité et met à jour les champs correspondants dans la base de données.
+
+## Reponse Question Jour 4 :
+
+- job01 :
+    
+
+- job02 :
+    
+
+- job03 :
+    
+
+- job04 :
+    
+
+- job05 :
+    
