@@ -85,16 +85,27 @@ Pour lancez le projet sur VScode allez ouvrez le terminal et deplacez vous dans 
 ## Reponse Question Jour 4 :
 
 - job01 :
-    
+    Séparer la logique métier des contrôleurs présente plusieurs avantages :
+    - Le contrôleur se charge uniquement de la gestion de la requête et de la navigation, tandis que la logique métier est isolée dans des services.
+    - En isolant la logique métier, il est plus simple d'écrire des tests unitaires pour vérifier le comportement des services.
+    - La logique métier encapsulée dans des services peut être utilisée par différents contrôleurs ou d’autres composants, évitant ainsi la duplication de code.
 
 - job02 :
-    
+    Spring Security offre de nombreux avantages pour protéger une application, tels que :
+    - Authentification et autorisation robustes : Il fournit des mécanismes configurables pour vérifier l'identité des utilisateurs et restreindre l'accès aux ressources en fonction de leurs rôles ou permissions.
+    - Personnalisation aisée : Vous pouvez personnaliser la page de connexion, les règles d’accès par URL et définir des stratégies de gestion de sessions et de "remember-me" pour adapter la sécurité aux besoins spécifiques de votre application.
+    - Protection intégrée contre les vulnérabilités : Spring Security inclut des protections contre les attaques courantes, comme le CSRF, les attaques par injection et autres vulnérabilités web.
+    - Intégration avec divers systèmes d'authentification : Il permet l'intégration avec des services d'authentification externes (OAuth2, LDAP, etc.) et la gestion centralisée des utilisateurs.
+    - Extensibilité et flexibilité : Grâce à ses filtres de sécurité et son modèle de configuration basé sur des beans, il est facile d'étendre ou d'adapter la sécurité à l'évolution des besoins de l'application.
 
 - job03 :
-    
+    En Creant un Fichier Html pour la page de login.
 
 - job04 :
-    
+    Spring Security gère les autorisations basées sur les rôles en associant à chaque utilisateur des rôles (par exemple, USER, ADMIN) et en comparant ces rôles aux règles d'accès définies dans la configuration de sécurité (via des méthodes comme hasRole ou hasAuthority). Lorsqu'une requête arrive, le filtre de sécurité vérifie si l'utilisateur authentifié possède le rôle requis pour accéder à la ressource, et autorise ou refuse l'accès en conséquence.
 
 - job05 :
-    
+    Pour stocker les mots de passe de manière sécurisée, Spring Security recommande d'utiliser un encodeur de mots de passe, comme BCryptPasswordEncoder. Voici les points clés :
+    - Utilisation d'un hachage sécurisé : BCrypt génère un hachage sécurisé avec un sel aléatoire intégré, ce qui rend l'attaque par rainbow tables pratiquement impossible.
+    - Encodage avant stockage : Avant de sauvegarder le mot de passe en base, encodez-le avec BCrypt. Cela garantit que même si la base est compromise, les mots de passe restent illisibles.
+    - Intégration via PasswordEncoder : Déclarez un bean PasswordEncoder et utilisez-le pour encoder les mots de passe lors de l'inscription.
