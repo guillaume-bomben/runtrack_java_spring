@@ -109,3 +109,49 @@ Pour lancez le projet sur VScode allez ouvrez le terminal et deplacez vous dans 
     - Utilisation d'un hachage sécurisé : BCrypt génère un hachage sécurisé avec un sel aléatoire intégré, ce qui rend l'attaque par rainbow tables pratiquement impossible.
     - Encodage avant stockage : Avant de sauvegarder le mot de passe en base, encodez-le avec BCrypt. Cela garantit que même si la base est compromise, les mots de passe restent illisibles.
     - Intégration via PasswordEncoder : Déclarez un bean PasswordEncoder et utilisez-le pour encoder les mots de passe lors de l'inscription.
+
+## Reponse Question Jour 5 :
+
+- job01 :
+    Le principal avantage de Thymeleaf est qu'il permet de créer des templates HTML valides et « naturels ». Cela signifie que vous pouvez ouvrir les fichiers Thymeleaf directement dans un navigateur pour les visualiser comme des pages statiques. Cette approche facilite la collaboration entre développeurs et designers, car le code reste lisible et éditable avec des outils HTML standard, contrairement à JSP qui nécessite un environnement serveur pour être affiché correctement.
+
+- job02 :
+    Pour lier une liste d'objets à une vue Thymeleaf, on peux ajouter cette liste au modèle dans votre contrôleur, puis utiliser l'attribut dans le template avec l'attribut Thymeleaf th:each pour itérer sur les objets.
+
+- job03 :
+    Pour lier un objet à un formulaire Thymeleaf, on doit :
+    1. Ajouter l'objet au modèle dans votre contrôleur.
+    2. Utiliser l'attribut th:object dans la balise form du template.
+    3. Utiliser th:field pour lier chaque champ du formulaire aux propriétés de l'objet.
+
+- job04 :
+    Thymeleaf utilise l'attribut th:errors en combinaison avec les macros de validation (comme #fields) pour afficher automatiquement les messages d'erreur associés aux champs du formulaire qui n'ont pas passé la validation.
+
+- job05 :
+    On peux accéder à l'utilisateur actuellement connecté via le dialecte Spring Security pour Thymeleaf.
+
+- job06 :
+    Spring Web Flow s'avère particulièrement utile dans les scénarios où on doit gérer des processus ou des chemins de navigation complexes au sein de votre application.
+
+- job07 :
+    Dans Spring Web Flow, les états représentent les différentes étapes du processus (affichage d'une vue, exécution d'une action, prise de décision, etc.) et les transitions déterminent le passage d'un état à un autre en réponse à un événement.
+
+- job08 :
+    Pour lier une vue Thymeleaf à une étape spécifique d'un flux Spring Web Flow, on déclare un view-state dans le fichier de définition du flux et spécifiez la vue (par exemple, le nom du template) via l'attribut view. Le view-resolver intégré se charge ensuite de résoudre le fichier Thymeleaf associé.
+
+- job09 :
+    Pour configurer une page d'erreur personnalisée avec Thymeleaf et Spring Boot, procédez comme suit :
+    1. Créez un fichier Thymeleaf nommé « error.html » dans le dossier src/main/resources/templates. Ce fichier sera utilisé par défaut pour gérer les erreurs générales.
+    2. (Optionnel) Pour définir des pages spécifiques à certains codes HTTP (comme 404 ou 500), créez des fichiers dans le sous-dossier « error » (ex. src/main/resources/templates/error/404.html).
+    3. Désactivez la page blanche par défaut dans application.properties en ajoutant : `server.error.whitelabel.enabled=false`
+
+- job10 :
+    Pour inclure un fragment Thymeleaf, on peux utiliser l'attribut th:replace ou th:include. Par exemple :
+    `<div th:replace="fragments/header :: header"></div>`
+    Ici, Thymeleaf remplace cette div par le contenu du fragment nommé header défini dans le fichier header.html. on peux également utiliser th:include pour insérer le fragment sans remplacer l'élément parent.
+
+- job11 :
+    Dans un projet Spring Boot, les ressources statiques (CSS, JavaScript, images, etc.) doivent être placées dans le dossier src/main/resources/static (ou alternativement dans src/main/resources/public, src/main/resources/resources, ou META-INF/resources). Spring Boot se charge ensuite de les servir automatiquement depuis le chemin racine.
+
+- job12 :
+    Thymeleaf est un moteur de templates côté serveur et ne fournit pas nativement de mécanisme asynchrone. Cependant, vous pouvez combiner Thymeleaf avec des appels AJAX pour charger du contenu de manière asynchrone.

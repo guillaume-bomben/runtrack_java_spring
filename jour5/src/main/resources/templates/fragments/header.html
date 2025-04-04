@@ -1,0 +1,4 @@
+<div th:fragment="header">
+    <p>Bonjour, <span sec:authentication="name">Utilisateur</span> !</p>
+    <p>Nom d'utilisateur : <span th:text="${#authentication.principal.username}"></span></p>
+</div>

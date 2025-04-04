@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sélection du produit</title>
+</head>
+<body>
+    <h1>Sélectionnez un produit</h1>
+    <form th:action="next" method="post">
+        <select name="product">
+            <option value="Produit1">Produit 1</option>
+            <option value="Produit2">Produit 2</option>
+        </select>
+        <button type="submit">Suivant</button>
+    </form>
+</body>
+</html>
